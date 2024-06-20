@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ asset('frontassets/login.css') }}">
     <link rel="stylesheet" href="{{ asset('frontassets/custom.js') }}">
       <!-- Smartsupp Live Chat script -->
-<script type="text/javascript">
+{{-- <script type="text/javascript">
 var _smartsupp = _smartsupp || {};
 _smartsupp.key = 'e20cacd31f2e1897b4d30423bb1a827aff521cc5';
 window.smartsupp||(function(d) {
@@ -23,7 +23,7 @@ window.smartsupp||(function(d) {
 })(document);
 </script>
 <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
-        
+         --}}
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
