@@ -150,8 +150,8 @@
 <div class="main-sidebar sidebar-style-2 bg-light">
     <aside id="sidebar-wrapper">
       <div class="sidebar-brand">
-        <!--<a href="index.html"> <img alt="image" src="{{ asset('homeasset/images/logo.png') }}" width="100" class="header-logo" /> -->
-        <span class="logo-name text-white">Tandnewmedia</span>
+        <a href="index.html"> <img alt="image" src="{{ asset('homeasset/images/img/logo.png') }}" width="150" class="header-logo" />
+        {{-- <span class="logo-name text-white">Extract</span> --}}
         </a>
       </div>
       <ul class="sidebar-menu">
