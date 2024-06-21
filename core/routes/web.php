@@ -29,6 +29,7 @@ Auth::routes();
 // Route::get('/TC', [App\Http\Controllers\HomeController::class, 'term'])->name('term');
 // Route::post('/log-in', [LoginController::class, 'login'])->name('loggin');
 
+
 Route::middleware(['auth'])->group(function () {
     Route::controller(HomeController::class)->group(function () {
         Route::get('/home', 'index')->name('home');
@@ -68,8 +69,13 @@ Route::middleware(['auth'])->group(function () {
 
     Route::controller(LoginController::class)->group(function () {
         Route::get('/logout', 'logout')->name('logou');
+        // Route::get('/adminlogin', 'Adminlogin')->name('admin.login');
         Route::Post('/create', 'ctrate')->name('registe');
     });
+});
+
+Route::controller(LoginController::class)->group(function () {
+    Route::get('/adminlogin', 'Adminlogin')->name('admin.login');
 });
 
 Route::middleware(['auth', 'role:admin'])->group(function () {

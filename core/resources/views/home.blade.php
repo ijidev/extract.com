@@ -117,14 +117,17 @@
                 </div>
 
                 <div class="mainLevels">
+                  @php
+                    $sn = 1;  
+                  @endphp
                    @foreach ($tiers as $item) 
                     
                     @if($item->id == $user->tier->id)
                         <div class="level" id="level1" style="background-image: linear-gradient(135deg, rgb(255, 152, 46) 0%, rgb(238, 21, 135) 44%, rgb(162, 48, 250) 100%);">
-                            
-                            <p>{{ $item->name }} <img src="{{ asset($item->icon) }}" width="25" alt="" class="crown"></p>
+                              VIP {{$sn++}}
+                            <p> ({{ $item->name}}) <img src="{{ asset($item->icon) }}" width="25" alt="" class="crown"></p>
                             <ul>
-                                @if($item->name == 'Normal')
+                                @if($item->id == 1)
                                     <li>{{ $item->name }} users are assigned general usage access to data collection</li>
                                     <li>Applicable to most data collection situations of light to medium level of usage involving the Products </li>
                                     <li>Profits of {{ $item->percent }}% per Product - {{ $item->daily_optimize }} products per set.</li>
@@ -141,9 +144,9 @@
                     
                     <div class="level" id="level1">
                         
-                        <p>{{ $item->name }} <img src="{{ asset($item->icon) }}" width="25" alt="" class="crown"> </p>
+                        <p>VIP {{$sn++}}  <br> ({{ $item->name}}) <img src="{{ asset($item->icon) }}" width="25" alt="" class="crown"> </p>
                         <ul>
-                            @if (Auth::user()->tier->name == 'Normal')
+                            @if ($item->id == 1)
                                 <li>{{ $item->name }} users are assigned general usage access to data collection</li>
                                 <li>Applicable to most data collection situations of light to medium level of usage involving the Products </li>
                                 <li>Profits of {{ $item->percent }}% per Product - {{ $item->daily_optimize }} products per set.</li>

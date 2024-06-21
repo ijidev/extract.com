@@ -15,7 +15,7 @@
                         
                         <form method="POST" action="{{ route('login') }}" class="formInputs">
                             <!-- Main Text -->
-                            <h1 class="auth-heading pt-3">Login Now</h1>
+                            <h1 class="auth-heading pt-3">Admin Login</h1>
                             @csrf
                             <div class="login">
                                         @error('username')
@@ -71,8 +71,8 @@
                         </a>
                     @endif
                     <!-- Register -->
-                    <small>Do not have an account? </small>
-                    <a href="{{ route('register') }}" class="signup text-orange">Signup</a>
+                    {{-- <small>Do not have an account? </small>
+                    <a href="{{ route('register') }}" class="signup text-orange">Signup</a> --}}
                 </div>
                
             </div>

@@ -19,6 +19,9 @@
                     </p>
                 </div>
             </div>
+            @php
+              $sn = 1;  
+            @endphp
             @foreach ($tiers as $item)
                 @if ($user->tier == $item)
                 <div class="card mt-3">
@@ -26,7 +29,8 @@
                         <div class="row">
 
                             <h4 class="card-title col-7">
-                                {{ $item->name}}
+                                VIP {{$sn++}}  <br>
+                                ({{ $item->name}})
                                 <img src="{{ asset($item->icon) }}" width="30" class="img-fluid rounded-circle" alt="icon">
                                 <span class="badge bg-primary">Current Tire</span>
                             </h4>
@@ -63,7 +67,8 @@
                             <div class="row">
 
                                 <h4 class="card-title col-sm-8">
-                                    {{ $item->name}}
+                                    VIP {{$sn++}}  <br>
+                                    ({{ $item->name}})
                                     <img src="{{ asset($item->icon) }}" width="30" class="img-fluid rounded-circle" alt="icon">
                                     
                                 </h4>

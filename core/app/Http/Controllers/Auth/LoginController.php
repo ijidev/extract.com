@@ -42,11 +42,20 @@ class LoginController extends Controller
     
     public function logout()
     {
-        Session::flush();
-        
-        Auth::logout();
+        if (Auth::user()->hasRole('admin')) {
+            # code...
+            Session::flush();
+            Auth::logout();
+            return redirect()->route('admin.login');
+        }else{
+            Session::flush();
+            Auth::logout();
+            return redirect('login');
+        }
+    }
 
-        return redirect('login');
+    public function Adminlogin(){
+        return view('admin.login');
     }
     
     public function username()
